@@ -178,19 +178,86 @@ Create a `.env` file inside `server/`
 Example:
 
 ```env
+NODE_ENV=development
 PORT=5000
-MONGODB_URI=mongodb://127.0.0.1:27017/ai-test-generator
-JWT_SECRET=your_secret
 CLIENT_ORIGIN=http://localhost:5173
-GROQ_API_KEY=your_key
+
+MONGODB_URI=mongodb://127.0.0.1:27017/ai-test-generator
+JWT_SECRET="REPLACE_WITH_YOUR_KEY"
+JWT_EXPIRES_IN=7d
+
+GROQ_API_KEY="REPLACE_WITH_YOUR_KEY"
+GROQ_BASE_URL=https://api.groq.com/openai/v1
+GROQ_MODEL=llama-3.3-70b-versatile
+
+UPLOAD_DIR=uploads
+MAX_UPLOAD_MB=25
 ```
 
 ---
 
-## 4. Start MongoDB
+## 4. Install and Start MongoDB
+
+### Ubuntu Installation
+
+Import MongoDB public key:
+
+```bash
+curl -fsSL https://pgp.mongodb.com/server-8.0.asc | \
+sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
+--dearmor
+```
+
+Create MongoDB source list:
+
+```bash
+echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" | \
+sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+```
+
+Update packages:
+
+```bash
+sudo apt update
+```
+
+Install MongoDB:
+
+```bash
+sudo apt install -y mongodb-org
+```
+
+---
+
+### Start MongoDB Service
 
 ```bash
 sudo systemctl start mongod
+```
+
+Enable MongoDB on boot:
+
+```bash
+sudo systemctl enable mongod
+```
+
+Verify MongoDB status:
+
+```bash
+sudo systemctl status mongod
+```
+
+---
+
+### Optional: Install MongoDB Compass
+
+Download:
+https://www.mongodb.com/products/tools/compass
+
+Install `.deb` package:
+
+```bash
+sudo dpkg -i mongodb-compass_*.deb
 ```
 
 ---
