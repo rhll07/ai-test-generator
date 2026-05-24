@@ -316,4 +316,4 @@ AI-generated outputs should always be reviewed manually before production usage.
 
 # Author
 
-Built by [Rahul Krishna R](https://github.com/rhll07).
+Built by [Rahul Krishna R](https://github.com/rhll07)
