@@ -252,12 +252,12 @@ sudo systemctl status mongod
 ### Optional: Install MongoDB Compass
 
 Download:
-https://www.mongodb.com/products/tools/compass
+https://downloads.mongodb.com/compass/mongodb-compass_1.49.7_amd64.deb
 
 Install `.deb` package:
 
 ```bash
-sudo dpkg -i mongodb-compass_*.deb
+sudo dpkg -i mongodb-compass_1.49.7_amd64.deb
 ```
 
 ---
