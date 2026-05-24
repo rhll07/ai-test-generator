@@ -155,8 +155,8 @@ The following systems/features exist in the planned architecture or implementati
 ## 1. Clone Repository
 
 ```bash
-git clone <repo-url>
-cd ai-test-generator-platform
+git clone https://github.com/rhll07/ai_test_generator
+cd ai-test-generator
 ```
 
 ---
@@ -249,6 +249,4 @@ AI-generated outputs should always be reviewed manually before production usage.
 
 # Author
 
-Built and explored by Rahul Krishna R.
-
-Currently using this project to learn and reverse engineer modern AI-assisted full-stack architecture systems in public.
+Built by [Rahul Krishna R](https://github.com/rhll07).
