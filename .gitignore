@@ -7,3 +7,4 @@ coverage/
 server/uploads/
 server/tmp/
 *.log
+specs.md
